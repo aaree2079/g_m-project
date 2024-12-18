@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toggleSwitch4-checkbox</title>
+    <style>
+      .onoff-switch-container {
+        display: inline-block;
+        width: 140px;
+        height: 30px;
+        position: relative;
+      }
+      .onoff-switch-container input[type="checkbox"] {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+      }
+      .onoff-switch-container label {
+        padding-left: 70px;
+        line-height: 30px;
+        font-size: 16px;
+      }
+      .onoff-switch-container label::after {
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        content: "";
+        width: 24px;
+        height: 24px;
+        background: #d1d1d1;
+        border-radius: 100%;
+        transition: all 0.3s;
+      }
+      .onoff-switch-container label::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 60px;
+        height: 30px;
+        border: 1px solid #d1d1d1;
+        border-radius: 20px;
+        background: #f1f1f1;
+        box-sizing: border-box;
+      }
+      .onoff-switch-container input[type="checkbox"]:checked + label::after {
+        transform: translateX(28px);
+        background: gold;
+      }
+      .onoff-switch-container input[type="checkbox"]:checked + label::before {
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="onoff-switch-container">
+      <input type="checkbox" name="onoff-switch" id="onoff-switch1" />
+      <label for="onoff-switch1">자동로그인</label>
+    </div>
+    <div class="onoff-switch-container">
+      <input type="checkbox" name="onoff-switch" id="onoff-switch2" />
+      <label for="onoff-switch2">출동현황황</label>
+    </div>
+  </body>
+</html>
